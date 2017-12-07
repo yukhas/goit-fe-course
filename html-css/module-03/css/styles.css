@@ -1,0 +1,75 @@
+body {
+    background: #87CEEB url(../img/page-bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.wrapper {
+    width: 480px;
+    margin: auto;
+    background: #fff center center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -250px;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    color: #696969;
+}
+
+h1 {
+    font-family: "Arial Narrow", Geneva, sans-serif;
+    color: rgb(47, 62, 79);
+    margin-top: 55px;
+    letter-spacing: -2px;
+}
+
+p,
+h1 {
+    margin-left:  40px;
+    margin-right: 30px;
+}
+
+img {
+    margin-left:  30px;
+    margin-right: 20px;
+}
+
+li,
+.important {
+    font-family: Arial, sans-serif;
+    font-size: 1.1em;
+    color: rgb(47, 62, 79);
+}
+
+hr {
+    width: 400px;
+    margin-top: 50px;
+}
+
+.left-list {
+    display: inline-block;
+    width: 50%;
+/*     height: 460px;*/    
+    box-sizing: border-box;
+    margin-right: -5px;
+}
+
+.right-list {
+    display: inline-block;
+    width: 50%;
+    /* height: 460px; */
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
