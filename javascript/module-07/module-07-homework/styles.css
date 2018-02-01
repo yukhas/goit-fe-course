@@ -1,0 +1,44 @@
+#keyboardLayout {
+    position: relative;
+    top: 100px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.en {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+}
+
+.ru {
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+.ua {
+    float: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+}
+
+.topRow {
+    width: 480px;
+    margin: 0 auto;
+}
+
+.middleRow {
+    width: 440px;
+    margin: 0 auto;
+}
+
+.bottomRow {
+    width: 400px;
+    margin: 0 auto;
+}
