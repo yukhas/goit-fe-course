@@ -1,0 +1,72 @@
+
+.background {
+    margin: 0 auto;
+    display: inline-block;
+    width: 350px;
+    height: 550px;
+    position: relative;
+    background-color: #ebebf3;
+    box-shadow: 0 0 25px;
+}
+
+.user-card {
+    background-color: #fff;
+    width: 309px;
+    height: 480px;
+    border-radius: 10px;
+    position: absolute;
+    left: 15px;
+    bottom: 50px;
+    
+}
+
+.user-name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 235px;
+    text-align: center;
+}
+
+.image-caption {
+    width: 250px;
+    height: 100px;
+    color: #50505a;
+    position: absolute;
+    bottom: 65px;
+    left: 40px;
+}
+
+.added-info {
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+.number {
+    padding-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+}
+
+.image-caption-bottom {
+    height: 35px;
+    width: 220px;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+}
+
+.bottom-images {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.hand-img {
+    margin-left: 10px;
+}
+
+
+
+
