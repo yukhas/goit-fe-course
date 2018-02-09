@@ -1,0 +1,34 @@
+body {
+    font-family: 'Playfair Display', serif;
+    color: #696969;
+}
+
+.wrapper {
+    margin: auto;
+    width: 470px;
+    box-shadow: 0 0 5px #A4A4A4;
+}
+
+img {
+    padding: 25px 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.article, .section {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+h1 {
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.article p {
+    font-size: 0.9em;
+}
+
+.section {
+    color: silver;
+}
