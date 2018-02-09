@@ -14,7 +14,10 @@
 const btn = document.querySelector(".keyboard__btn--space");
 const pressed = document.querySelector(".pressed");
 
+<<<<<<< HEAD
 btn.addEventListener("click", () => {
   btn.classList.toggle("keyboard__btn--active");
   pressed.textContent = btn.textContent;
 });
+=======
+>>>>>>> 2c08d72a4906622798e5b118bac33a6a3384e42b
