@@ -76,3 +76,8 @@ $background: #3498db;
     font-weight: bold;
   }
 }
+.keyboard__btn--active {
+  border:1px solid transparent;
+  background-color:#03a9f4;
+  color:#fff;
+}

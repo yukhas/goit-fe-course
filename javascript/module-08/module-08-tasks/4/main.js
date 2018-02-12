@@ -23,31 +23,42 @@ const activeBtn = {
   node: null
 };
 
-let soundOnOff = document.querySelector("#slideThree");
-console.log(soundOnOff.hasAttribute('checked'));
-if (soundOnOff.hasAttribute('checked')) {
-  btns.addEventListener("click", function (event) {
-    if (event.target.classList.contains("keyboard__btn")) {
-      console.log(event.target);
-      event.target.classList.add("keyboard__btn--active");
+
+
+const soundOnOff = document.getElementById("slideThree");
+
+soundOnOff.onclick = function () {
+  if (soundOnOff.hasAttribute("checked")) {
+    soundOnOff.removeAttribute("checked");
+    console.log(soundOnOff);
+    console.log(soundOnOff.hasAttribute("checked"));
+  } else {
+    soundOnOff.setAttribute("checked", true);
+    console.log(soundOnOff);
+    console.log(soundOnOff.hasAttribute("checked"));
+  }
+};
+
+btns.addEventListener("click", function (event) {
+  if (activeBtn.node !== null) {
+    activeBtn.node.classList.remove("keyboard__btn--active");
+  }
+  if (event.target.classList.contains("keyboard__btn")) {
+    event.target.classList.add("keyboard__btn--active");
+    activeBtn.node = event.target;
+    if (soundOnOff.hasAttribute("checked")) {
       playSound();
     }
-  });
-} else {
-  //btns.addEventListener("click", colorOn(event));
-}
-
-/* function soundOn(event) {
-  if (event.target.classList.contains("keyboard__btn")) {
-    console.log(event.target);
-    event.target.classList.add("keyboard__btn--active");
-    event.target.playSound();
   }
-} */
+});
 
-/* function colorOn(event) {
+/* function btnActive(event) {
+  if (activeBtn.node !== null) {
+    activeBtn.node.classList.remove("keyboard__btn--active");
+  }
   if (event.target.classList.contains("keyboard__btn")) {
     event.target.classList.add("keyboard__btn--active");
+    activeBtn.node = event.target;
   }
 } */
 
