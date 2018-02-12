@@ -30,12 +30,8 @@ const soundOnOff = document.getElementById("slideThree");
 soundOnOff.onclick = function () {
   if (soundOnOff.hasAttribute("checked")) {
     soundOnOff.removeAttribute("checked");
-    console.log(soundOnOff);
-    console.log(soundOnOff.hasAttribute("checked"));
   } else {
     soundOnOff.setAttribute("checked", true);
-    console.log(soundOnOff);
-    console.log(soundOnOff.hasAttribute("checked"));
   }
 };
 
