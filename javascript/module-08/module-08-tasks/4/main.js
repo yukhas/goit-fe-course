@@ -52,13 +52,4 @@ btns.addEventListener("click", function (event) {
   }
 });
 
-/* function btnActive(event) {
-  if (activeBtn.node !== null) {
-    activeBtn.node.classList.remove("keyboard__btn--active");
-  }
-  if (event.target.classList.contains("keyboard__btn")) {
-    event.target.classList.add("keyboard__btn--active");
-    activeBtn.node = event.target;
-  }
-} */
 
