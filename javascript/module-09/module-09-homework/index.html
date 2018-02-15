@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>GOIT-FE-course</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>You pressed:
+        <span class="pressed"></span>
+    </h1>
+    <div id="keyboard"></div>
+        <script type="text/template" id="container">
+            <div id="first-row" class="keyboard__row">
+                <% for (i = 0; i < 12; i++) { %>
+                    <button class="keyboard__btn"><%- alphabet[i] %>
+                <% } %>
+            </div>
+            <div id="second-row" class="keyboard__row">
+                <% for (i = 12; i < 23; i++) { %>
+                    <button class="keyboard__btn"><%- alphabet[i] %>
+                <% } %>
+            </div>
+            <div id="third-row" class="keyboard__row">
+                <% for (i = 23; i < 33; i++) { %>
+                    <button class="keyboard__btn"><%- alphabet[i] %>
+                <% } %>
+            </div>
+            <div id="space" class="keyboard__row">
+                <button class="keyboard__btn keyboard__btn--space"><%- alphabet[alphabet.length - 1] %>
+            </div>
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
