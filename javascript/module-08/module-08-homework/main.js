@@ -61,3 +61,15 @@ window.addEventListener("keypress", function (event) {
         }
     })
 });
+
+/* window.addEventListener('keydown', function (event) {
+    if (keys.includes(event.key)) {
+        let button = button.find((elem) => elem.innerHTML === event.key || elem.innerHTML === "space");
+        button.classList.add('keyboard__btn--active');
+        setTimeout(() => button.classList.remove('keyboard__btn--active'), 100);
+        let soundTrue = document.getElementById("slideThree");
+        if (soundTrue.checked) {
+            playSound(button.dataset.note);
+        }
+    }
+}, true) */

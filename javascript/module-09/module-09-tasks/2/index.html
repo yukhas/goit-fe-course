@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>GOIT-FE-course</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="row-container"></div>
+    <script type="text/template" id="row-tpl">
+        <div>
+            <!-- <% for (i = 0; i < row.length; i++) { %>
+                <button><%- row[i] %></button>
+            <% } %> -->
+            <% row.forEach(item => { %>
+                <button><%- item %></button>
+            <% }); %>
+        </div>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
