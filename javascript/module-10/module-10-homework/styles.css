@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: gainsboro;
+}
+
+.timer {
+  font-size: 4rem;
+  margin: 0 auto;
+}
+.exercise {
+  margin-bottom: 1rem;
+  font-size: 5rem;
+  margin: 0 auto;
+}
+
+.keyboard /* button */ {
+  padding: 1rem;
+  font-size: 3rem;
+  margin: 0 auto;
+}
+
+.btn {
+  font-size: 2rem;
+}
+
+.buttons-ctrl {
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+

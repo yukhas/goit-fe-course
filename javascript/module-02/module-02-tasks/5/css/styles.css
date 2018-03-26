@@ -1,0 +1,19 @@
+:root {
+  --fz: 32px;
+}
+body {
+  background-color: #434B48;
+  font-size: var(--fz);
+  font: monospace;
+  color: #ccc;
+}
+
+.wrapper {
+  width: 400px;
+  margin: auto;
+}
+
+span{
+  display: inline-block;
+  width: 60px;
+}

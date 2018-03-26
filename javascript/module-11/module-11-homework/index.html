@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <link rel="stylesheet" href="styles.css">
+  <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+</head>
+
+<body>
+  <div class="button-area">
+    <div class="button-area-item">
+      <button class="btn get-all">getAllUsers</button>      
+    </div>
+    <div class="button-area-item">
+      <button class="btn get-user">getUser</button>
+      <input class="input-field" type="text" value=id id="add">
+    </div>
+    <div class="button-area-item">
+      <button class="btn add-user">addUser</button>
+      <input class="input-field" type="text" value=name id="add-name">
+      <input class="input-field" type="text" value=age id="add-age">
+    </div>
+    <div class="button-area-item">
+      <button class="btn remove-user">removeUser</button>
+      <input class="input-field" type="text" value=id id="remove">
+    </div>
+    <div class="button-area-item">
+      <button class="btn update-user">updateUser</button>
+      <input class="input-field" type="text" value=id id="update">
+      <input class="input-field" type="text" value=name id="update-name">
+      <input class="input-field" type="text" value=age id="update-age">
+    </div>
+  </div>
+
+  <div class="result-area">
+
+  </div>
+  
+  <script type="text/template" id="table">
+    <table class="users">
+      <thead class="table-head">
+        <tr>
+          <td>id</td>
+          <td>name</td>
+          <td>age</td>          
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach((item) => { %>
+          <tr>
+            <td><%- item.id %></td>
+            <td><%- item.name %></td>
+            <td><%- item.age %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </script>
+
+  <script type="text/template" id="row-user">
+    <table class="users">
+      <thead class="table-head">
+        <tr>
+          <td>id</td>
+          <td>name</td>
+          <td>age</td>          
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td><%- data.id %></td>
+            <td><%- data.name %></td>
+            <td><%- data.age %></td>
+          </tr>
+      </tbody>
+    </table>
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

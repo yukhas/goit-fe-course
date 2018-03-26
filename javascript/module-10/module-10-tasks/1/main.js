@@ -33,18 +33,13 @@ controls.addEventListener("click", setActiveBtn);
 startBtn.addEventListener("click", startTimer);
 stopBtn.addEventListener("click", stopTimer);
 
-
-function startTimer() {
-    let t = 0;
-    let start = setInterval(() => {
-        updateClockface(t);
-        t += 5;
-    }, 5);
+function startTimer() { 
+    const start = clockface.innerHTML;
+    console.log(start);
+    updateClockface(1);
 }
 
-function stopTimer() { 
-    clearInterval(start);
-}
+function stopTimer() { }
 
 function resetClockface() { }
 
@@ -99,4 +94,3 @@ function setActiveBtn(e) {
     elem.classList.add("lang-ctrls__btn--active");
 }
 
-console.log(getFormattedTime(1000));
