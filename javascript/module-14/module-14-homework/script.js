@@ -9,6 +9,8 @@
 
 const startButton = document.querySelector(".start-button");
 const stopButton = document.querySelector(".stop-button");
+const timerDisplay = document.querySelector(".timer-display");
+let currentTime, start, stop;
 
 startButton.addEventListener("click", function (event) {
     timer.start();
@@ -17,26 +19,37 @@ stopButton.addEventListener("click", function (event) {
     timer.stop();
 });
 
+
 function Timer() {
     this.startTime = 0;
-    this.stopTime = null;
-    this.interval = null;
+    this.stopTime = 0;
+    this.interval = 0;
 }
 
 Timer.prototype.start = function () {
     let date = new Date();
-    let time = date.getTime();
+    let time = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
     this.startTime = time;
+    start = date.getTime();
+    currentTime = setInterval(() => {
+        date = new Date();
+        time = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
+        timerDisplay.textContent = time;
+    }, 1000);
     console.log(timer);
 }
 
 Timer.prototype.stop = function () {
+    clearInterval(currentTime);
     let date = new Date();
-    let time = date.getTime();
+    stop = date.getTime();
+    let time = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
     this.stopTime = time;
+    let arrStopTime = this.stopTime.split(' : ');
+    this.interval = `${Math.round((stop - start)/ 60000)} minutes ${Math.round((stop - start) / 1000)} seconds`;
+    timerDisplay.textContent = this.interval;
     console.log(timer);
-    this.interval = this.stopTime - this.startTime;
-    console.log(timer);
+    
 }
 
 const timer = new Timer();
