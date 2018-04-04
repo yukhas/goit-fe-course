@@ -26,6 +26,7 @@ function Timer() {
     this.interval = 0;
 }
 
+
 Timer.prototype.start = function () {
     let date = new Date();
     let time = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
@@ -49,6 +50,7 @@ Timer.prototype.stop = function () {
     this.interval = `${Math.round((stop - start)/ 60000)} minutes ${Math.round((stop - start) / 1000)} seconds`;
     timerDisplay.textContent = this.interval;
     console.log(timer);
+    console.log(timer.interval);
     
 }
 
