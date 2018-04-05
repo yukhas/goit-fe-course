@@ -33,9 +33,7 @@ class Timer {
 
     getTime () {
         const numOfMinutes = Math.floor(this.interval / 60000);
-        console.log(numOfMinutes);
         const numOfSeconds = Math.floor((this.interval - (numOfMinutes * 3600)) / 1000);
-        console.log(this.interval);
         const time = `${numOfMinutes} minutes, ${numOfSeconds} seconds`;
         return time;
     }
@@ -54,7 +52,6 @@ class Timer {
 }
 
 const stopwatch = new Timer();
-console.log(stopwatch);
 
 startButton.addEventListener("click", function (event) {
     stopwatch.start();
@@ -62,8 +59,8 @@ startButton.addEventListener("click", function (event) {
 });
 stopButton.addEventListener("click", function (event) {
     stopwatch.stop();
-    console.log(stopwatch);    
     stopwatch.getTime();
+    console.log(stopwatch);
     console.log(stopwatch.getTime());        
     timerDisplay.textContent = stopwatch.getTime();
     daysToNYDisplay.textContent = Timer.timeToNY();
