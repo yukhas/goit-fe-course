@@ -9,52 +9,67 @@
 const startButton = document.querySelector(".start-button");
 const stopButton = document.querySelector(".stop-button");
 const timerDisplay = document.querySelector(".timer-display");
-let currentTime, start, stop;
+const daysToNYDisplay = document.querySelector(".days-to-ny");
+
+
+
+class Timer {
+    constructor () {
+        this.startTime = null;
+        this.stopTime = null;
+        this.interval = null;
+    }
+
+    start () {
+        const date = Date.now();
+        this.startTime = date;
+    }
+
+    stop () {
+        const date = Date.now();
+        this.stopTime = date;
+        this.interval = this.stopTime - this.startTime;
+    }
+
+    getTime () {
+        const numOfMinutes = Math.floor(this.interval / 60000);
+        const numOfSeconds = Math.floor((this.interval - (numOfMinutes * 3600)) / 1000);
+        const time = `${numOfMinutes} minutes, ${numOfSeconds} seconds`;
+        return time;
+    }
+
+    static timeToNY () {
+        const today = new Date(); 
+        const nextYear = today.getFullYear() + 1;
+        let endYear = new Date(nextYear, 0);
+
+        const msInDay = 1000 * 60 * 60 * 24;
+        const msToNY = endYear - today;
+        const numOfDaysToNY = `${Math.floor(msToNY / msInDay)} days to New Year`;
+
+        return numOfDaysToNY;
+    }
+}
+
+const stopwatch = new Timer();
 
 startButton.addEventListener("click", function (event) {
-    timer.start();
+    stopwatch.start();
+    console.log(stopwatch);
 });
 stopButton.addEventListener("click", function (event) {
-    timer.stop();
+    stopwatch.stop();
+    stopwatch.getTime();
+    console.log(stopwatch);
+    console.log(stopwatch.getTime());        
+    timerDisplay.textContent = stopwatch.getTime();
+    daysToNYDisplay.textContent = Timer.timeToNY();
 });
 
 
-function Timer() {
-    this.startTime = 0;
-    this.stopTime = 0;
-    this.interval = 0;
-}
 
 
-Timer.prototype.start = function () {
-    let date = new Date();
-    let time = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
-    this.startTime = time;
-    start = date.getTime();
-    currentTime = setInterval(() => {
-        date = new Date();
-        time = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
-        timerDisplay.textContent = time;
-    }, 1000);
-    console.log(timer);
-}
 
-Timer.prototype.stop = function () {
-    clearInterval(currentTime);
-    let date = new Date();
-    stop = date.getTime();
-    let time = `${date.getHours()} : ${date.getMinutes()} : ${date.getSeconds()}`;
-    this.stopTime = time;
-    let arrStopTime = this.stopTime.split(' : ');
-    this.interval = `${Math.round((stop - start)/ 60000)} minutes ${Math.round((stop - start) / 1000)} seconds`;
-    timerDisplay.textContent = this.interval;
-    console.log(timer);
-    console.log(timer.interval);
-    
-}
-
-const timer = new Timer();
-console.log(timer);
 
 
 
